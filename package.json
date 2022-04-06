@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "scrap_dev": "cd api && nodemon index.js",
-    "deploy":"concurrently --kill-others --raw \" next build && node server.js\" \"cd api && nodemon index.js\" ",
-    "prod":"concurrently --kill-others --raw \" next build && node server.js\" \"cd api && nodemon index.js\" ",
+    "deploy":"concurrently --kill-others --raw \" npm install && next build && node server.js\" \"cd api && nodemon index.js\" ",
+    "prod":"concurrently --kill-others --raw \" npm install && next build && node server.js\" \"cd api && nodemon index.js\" ",
     "heroku-postbuild": "concurrently --kill-others --raw \"npm install && next build && node server.js\" \"cd api && nodemon index.js\" "
   },
   "dependencies": {
