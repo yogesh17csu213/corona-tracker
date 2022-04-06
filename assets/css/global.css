@@ -1,0 +1,141 @@
+
+@font-face {
+    font-family:"nimbus-sans";
+    src:url("https://use.typekit.net/af/50ea52/00000000000000000001011c/27/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/50ea52/00000000000000000001011c/27/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/50ea52/00000000000000000001011c/27/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("opentype");
+    font-style:normal;
+    font-weight:300;
+    font-stretch:normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family:"nimbus-sans";
+    src:url("https://use.typekit.net/af/da0c19/00000000000000000001518d/27/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/da0c19/00000000000000000001518d/27/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/da0c19/00000000000000000001518d/27/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("opentype");
+    font-style:normal;
+    font-weight:400;
+    font-stretch:normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family:"nimbus-sans";
+    src:url("https://use.typekit.net/af/360cf4/000000000000000000012544/27/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/360cf4/000000000000000000012544/27/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/360cf4/000000000000000000012544/27/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("opentype");
+    font-style:normal;
+    font-weight:700;
+    font-stretch:normal;
+    font-display: swap;
+  }
+  
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family:"nimbus-sans";
+    font-display: swap;
+    background-color: rgba(33,37,41,1)!important;
+
+  }
+  
+.center{
+    text-align: center;
+}
+.home_banner{
+    height:200px;
+    background-color: rgba(33,37,41,1)!important;
+    color:#fff;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.cards{
+    max-width: 100%;
+    background-color: rgba(33,37,41,1)!important;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    min-height: 200px;
+}
+.card_main{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 7px;
+}
+.card_main h5{
+    text-align: right;
+    font-weight: 200;
+}
+.update_date{
+    display: flex;
+    justify-content: space-between;
+}
+.update_date :first-letter {
+    text-transform: uppercase;
+}
+
+.card_main p{
+    margin: 0;
+}
+
+.active{
+    background: linear-gradient(to right, #4f8a4a, #28a326, #3bac02);
+
+}
+
+.death{
+    background: linear-gradient(to right, #ee962a, #a54d25, #c44c06);
+}
+
+.recovered{
+    background: linear-gradient(to right, #1d5c79, #338eb8, #63c4f2);
+}
+
+.vaccinated{
+    background-color: #9a88f7 ;
+    background: linear-gradient(to right, #9a88f7 , #705fc7 , #3c3079 );
+
+
+}
+
+.select_box{
+    background-color: rgba(33,37,41,1)!important;
+}
+.select_box h3{
+    color: #fff;
+}
+.table_head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.table_head h4{
+    padding: 20px;
+}
+
+.table_head_filter{
+    padding-top: 20px;
+}
+
+.table_box_inner{
+    background-color: #fff;
+    border-radius: 7px;
+
+}
+
+.state_table{
+    border-top: 1px solid #e0e0e0;
+}
+
+.resources button{
+    color: #fff!important;
+    text-align: center!important;
+}
+
+.inner_tabs{
+    color: #fff;
+}
+.MuiBox-root{
+    border-color: rgba(224, 222, 222, 0.12)
+}
+@media screen and (max-width: 1000px) and (min-width: 360px) {
+    .home_banner{
+        height: 145px;
+    }
+}
