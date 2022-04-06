@@ -11,7 +11,6 @@ const app = next({'dev':true})
 const handler = routes.getRequestHandler(app, async ({req, res, route, query}) => {
 	app.render(req, res, route.page, query)
 })
-console.log('aa',app.prepare())
 
 app.prepare().then(() => {
 	const server = express()

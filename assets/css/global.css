@@ -134,6 +134,13 @@
 .MuiBox-root{
     border-color: rgba(224, 222, 222, 0.12)
 }
+
+.resources_tabs{
+    /* overflow: hidden; */
+    /* scroll-behavior: smooth; */
+    overflow-y: scroll;
+    max-height: 60vh;
+}
 @media screen and (max-width: 1000px) and (min-width: 360px) {
     .home_banner{
         height: 145px;

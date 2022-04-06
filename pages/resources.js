@@ -1,19 +1,30 @@
 import React,{ useState,useEffect } from 'react'
-import { connect } from 'react-redux'
-import { getWebsiteData,getTableData } from 'store/actions/home'
 import Resources from '@/components/resources'
 import Base from 'layout/base';
+import { getWebsiteData } from 'store/actions/home'
+import {initializeStore} from 'store'
 
 const ResourcesHome=(props)=> {
-
+  const {news,resources}=props
   return(
     <div>
         <Base>
-            <Resources />
+            <Resources news={news} resources={resources}/>
         </Base>
     </div>
     ) 
   }
+  export async function getServerSideProps(ctx){
+    const reduxStore = initializeStore()
+    await reduxStore.dispatch(getWebsiteData())
+    const state = reduxStore.getState()
+    return {
+        props: {
+          news:state?.homeData?.site_data?.news,
+          resources:state?.homeData?.site_data?.resources,
+        }
+      }
+}
 
 export default ResourcesHome
   

@@ -1,9 +1,9 @@
 import { getWebsiteDataRepo,getTableDataRepo } from "repositories/scrape"
 
 export const getWebsiteData = ()=> {
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch({type:'GET_WEBISTE_DATA_REQUEST'})
-        getWebsiteDataRepo()
+        await getWebsiteDataRepo()
             .then((response) => {
                 if(response && response.status== 200){
                     dispatch({type:'GET_WEBISTE_DATA_SUCCESS',payload:response && response.data})
