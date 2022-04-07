@@ -1,9 +1,9 @@
 const express = require('express')
 const next = require('next')
 const routes = require('./routes')
-const { createServer } = require('http');
-const { parse } = require('url');
-const { createReadStream } = require('fs');
+// const { createServer } = require('http');
+// const { parse } = require('url');
+// const { createReadStream } = require('fs');
 
 const port = 8000
 const app = next({'dev':true})

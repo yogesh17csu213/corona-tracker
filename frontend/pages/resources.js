@@ -18,12 +18,17 @@ const ResourcesHome=(props)=> {
     const reduxStore = initializeStore()
     await reduxStore.dispatch(getWebsiteData())
     const state = reduxStore.getState()
-    return {
+    if(state?.homeData?.site_data){
+      return {
         props: {
           news:state?.homeData?.site_data?.news,
           resources:state?.homeData?.site_data?.resources,
         }
       }
+    }
+    return {
+      notFound: true
+    }
 }
 
 export default ResourcesHome
