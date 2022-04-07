@@ -16,9 +16,11 @@ const Resources=(props)=>{
     };
 
     let list=resources.tabs[resourcesTabs]?.values.map((data,index)=>{
-        return(
-            <a><li>{data.text}</li></a>
-        )
+        if(data.text!=""){
+            return(
+                <a href={data.link} target='_blank'><li>{data.text}</li></a>
+            )
+        }
     })
     
     return(
@@ -54,26 +56,29 @@ const Resources=(props)=>{
                         
                         </TabPanel>
                         <TabPanel value="2">
-                        <div  className="inner_tabs">
-                            <h1 style={{ textAlign:"center" }}>Resources</h1>
-                            <div className="resources_tabs">
-                            <Container>
-                                <Row>
-                                    <Col sm={4}>
-                                        {resources.tabs?.map((obj,index)=>{
-                                            return(
-                                                <h4 onClick={()=>setRosourceTabs(index)}>{obj.heading}</h4>
-                                            )
-                                        })}
-                                    </Col>
-                                    <Col sm={8}>
-                                        {list}
-                                    </Col>
-                                </Row>
-                            </Container>
-                            </div>
-                        </div>      
-                        
+                            <div  className="inner_tabs">
+                                <h1 style={{ textAlign:"center" }}>Resources</h1>
+                                <div className="resources_tabs">
+                                <Container>
+                                    <Row>
+                                        <Col sm={4}>
+                                            <div className="resources_tabs_heading">
+                                                {resources.tabs?.map((obj,index)=>{
+                                                    return(
+                                                        <div className="box"><h4 onClick={()=>setRosourceTabs(index)}>{obj.heading}</h4></div>
+                                                    )
+                                                })}
+                                            </div>
+                                        </Col>
+                                        <Col sm={8}>
+                                            <div className="resources_tabs_data_list">
+                                                {list}
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                                </div>
+                            </div>      
                         </TabPanel>
                     </TabContext>
                 </Box>

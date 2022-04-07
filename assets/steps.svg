@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="225" viewBox="0 0 300 225">
-  <g id="Group_11241" data-name="Group 11241" transform="translate(23140 17145)">
-    <path id="Path_3828" data-name="Path 3828" d="M5.357,0H294.643C297.6,0,300,2.846,300,6.356V218.644c0,3.51-2.4,6.356-5.357,6.356H5.357C2.4,225,0,222.154,0,218.644V6.356C0,2.846,2.4,0,5.357,0Z" transform="translate(-23140 -17145)" fill="#bfdc08"/>
-    <path id="Intersection_37" data-name="Intersection 37" d="M0,5A5.187,5.187,0,0,1,5.357,0H294.642A5.187,5.187,0,0,1,300,5V54C201.527,63.93,95.754,83.427,0,101.406Z" transform="translate(-23140 -17145)" fill="#b7cf1a"/>
-  </g>
-</svg>
