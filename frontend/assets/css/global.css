@@ -175,6 +175,9 @@
     overflow: hidden;
 }
 
+.detail{
+    color: #fff;
+}
 
 @media screen and (max-width: 1000px) and (min-width: 360px) {
     .home_banner{

@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": " concurrently --kill-others --raw \"node server.js\" \"cd api && nodemon index.js\" ",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "scrap_dev": "cd api && nodemon index.js",
-    "deploy":"concurrently --kill-others --raw \" npm install && next build && node server.js\" \"cd api && nodemon index.js\" ",
-    "prod":"concurrently --kill-others --raw \" npm install && next build && node server.js\" \"cd api && nodemon index.js\" ",
-    "heroku-postbuild": "concurrently --kill-others --raw \"npm install && next build && node server.js\" \"cd api && nodemon index.js\" "
+    "dev": " concurrently --kill-others --raw \"cd frontend && node server.js\" \"cd api && nodemon index.js\" ",
+    "build": "cd frontend && next build",
+    "start": "concurrently --kill-others --raw \"cd frontend && node server.js\" \"cd api && node index.js\" ",
+    "scrap_dev": "cd api && node index.js",
+    "deploy":"concurrently --kill-others --raw \" npm i && cd frontend && next build && node server.js\" \"cd api && node index.js\" ",
+    "prod":"concurrently --kill-others --raw \" npm install && cd frontend && next build && node server.js\" \"cd api && node index.js\" ",
+    "heroku-postbuild": "concurrently --kill-others --raw \"npm install && cd frontend && next build && node server.js\" \"cd api && node index.js\" "
   },
   "dependencies": {
     "@autocomplete/material-ui": "^0.0.17",
