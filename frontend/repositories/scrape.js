@@ -3,13 +3,13 @@ import axios from "axios"
 export const getWebsiteDataRepo = (data) => {
     return axios({
       method: 'GET',
-      url:'http://localhost:8080/site-data',
+      url:'http://127.0.0.2/site-data',
     })
 }
 
 export const getTableDataRepo = (data) => {
     return axios({
       method: 'GET',
-      url:'http://localhost:8080/table-data',
+      url:'http://127.0.0.2/table-data',
     })
 }

@@ -6,8 +6,6 @@ services:
       dockerfile: "./deploy/Dockerfile.be"
     image: "backend:v2"
     #container_name: backend
-    volumes:
-      - ../:/home/ubuntu/main/corona-tracker/backend
     restart: always
     ports:
       - "8080"
@@ -26,7 +24,6 @@ services:
       - "8000"
     depends_on:
       - nginx
-      - redis
       - backend
   nginx:
     image: "nginx"

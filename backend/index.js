@@ -10,7 +10,7 @@ const app=express()
 app.use(cors())
 
 ;(async () => {
-    client = redis.createClient({url:`redis://redis}`})
+    client = redis.createClient({url:`redis://redis`})
     client.on('error', (err) => console.log('Redis Client Error', err));
   
     await client.connect()
@@ -129,7 +129,7 @@ app.get('/table-data',async (req, res) => {
             res.send(tableData)
         }else{
             tableData=await tableDataJson()
-            await client.set(req.url, JSON.stringify(tableData), 'EX',120000)
+            await client.set(req.url, JSON.stringify(tableData), 'EX',120)
             res.send(tableData);
         } 
     });
@@ -141,7 +141,7 @@ app.get('/site-data', async (req, res) => {
         res.send(scappedData)
     }else{
         scappedData=await webscrapHandler()
-        await client.set(req.url, JSON.stringify(scappedData), 'EX',120000)
+        await client.set(req.url, JSON.stringify(scappedData), 'EX',120)
         res.send(scappedData);
     } 
 });
